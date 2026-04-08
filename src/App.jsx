@@ -246,14 +246,14 @@ export default function App() {
       
       {/* Added Feature Section */}
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px', marginTop: '48px', marginBottom: '48px', background: 'transparent' }}>
-        <div style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', height: '64px', width: '100%', maxWidth: '600px' }}>
+        <div style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: "'SK Modernist', 'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', height: '64px', width: '100%', maxWidth: '600px' }}>
           <Typewriter
             text={["Want to play blackjack?", "click on the button below ⬇️"]}
             speed={60}
             initialDelay={500}
             className="text-blue-100"
             waitTime={1500}
-            deleteSpeed={35}
+            deleteSpeed={75}
             cursorChar={"|"}
             cursorClassName="ml-1 text-blue-400 font-bold"
             loop={true}
