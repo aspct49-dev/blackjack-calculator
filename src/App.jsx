@@ -245,8 +245,8 @@ export default function App() {
       {sel && <Sel title={sel === 'dealer' ? "Dealer's Card" : sel === 'split' ? "Card for Hand " + (split?.a + 1) : "Your Card"} onSelect={selCard} onClose={() => setSel(null)} />}
       
       {/* Added Feature Section */}
-      <div className="w-full flex flex-col items-center justify-center p-8 mt-12 mb-12 bg-transparent">
-        <div className="text-xl font-semibold text-center h-12 w-full max-w-[400px]">
+      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px', marginTop: '48px', marginBottom: '48px', background: 'transparent' }}>
+        <div style={{ fontSize: '1.25rem', fontWeight: 600, textAlign: 'center', height: '48px', width: '100%', maxWidth: '400px' }}>
           <Typewriter
             text={["Want to play blackjack?", "click on the button below ⬇️"]}
             speed={60}

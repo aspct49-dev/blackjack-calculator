@@ -91,7 +91,7 @@ const Typewriter = ({
   ]);
 
   return (
-    <div className={`inline whitespace-pre-wrap tracking-tight ${className || ''}`}>
+    <div className={`inline whitespace-pre-wrap tracking-tight ${className || ''}`} style={{ color: className?.includes('blue-100') ? '#dbeafe' : 'inherit' }}>
       <span>{displayText}</span>
       {showCursor && (
         <motion.span
@@ -103,6 +103,7 @@ const Typewriter = ({
               ? "hidden"
               : ""
           )}
+          style={{ marginLeft: '4px', color: '#60a5fa', fontWeight: 'bold' }}
           initial="initial"
           animate="animate"
         >
