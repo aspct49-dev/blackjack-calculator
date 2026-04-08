@@ -114,10 +114,10 @@ function SBtn({ href, children }) { return <a href={href} target="_blank" rel="n
 
 // Fixed icons - proper Kick and TikTok SVGs, all white
 const IgI = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
-const KiI = () => <img src={kickIcon} alt="Kick" style={{ width: 38, height: 38, objectFit: 'contain', transform: 'scale(1.8)' }} />;
-const YtI = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.996 15.51v-7.02l6.508 3.51-6.508 3.51z"/></svg>;
+const KiI = () => <img src={kickIcon} alt="Kick" style={{ width: 30, height: 30, objectFit: 'contain' }} />;
+const YtI = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.996 15.51v-7.02l6.508 3.51-6.508 3.51z" /></svg>;
 const XI = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>;
-const DiI = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.132 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>;
+const DiI = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.132 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" /></svg>;
 
 function Sel({ onSelect, onClose, title }) { return (<div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, backdropFilter: 'blur(6px)', animation: 'fi .2s ease' }} onClick={onClose}><div style={{ background: 'linear-gradient(150deg, #0a1832 0%, #154c9e 100%)', borderRadius: 16, padding: '22px 18px', maxWidth: 340, width: '90%', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 24px 64px rgba(0,0,0,0.5)', animation: 'si .2s ease' }} onClick={e => e.stopPropagation()}><h3 style={{ margin: '0 0 14px', textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 700, letterSpacing: 1 }}>{title}</h3><div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 7 }}>{CARDS.map(l => (<button key={l} onClick={() => onSelect(l)} style={{ padding: '12px 0', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: l === 'A' ? '#fbbf24' : '#fff', fontSize: 16, fontWeight: 700, fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif", cursor: 'pointer', transition: 'all 0.15s' }} onMouseEnter={e => { e.target.style.background = 'rgba(255,255,255,0.15)'; e.target.style.transform = 'scale(1.05)'; }} onMouseLeave={e => { e.target.style.background = 'rgba(255,255,255,0.06)'; e.target.style.transform = 'scale(1)'; }}>{l}</button>))}</div><button onClick={onClose} style={{ marginTop: 12, width: '100%', padding: '9px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'transparent', color: 'rgba(255,255,255,0.4)', fontSize: 13, cursor: 'pointer' }}>Cancel</button></div></div>); }
 
@@ -238,12 +238,12 @@ export default function App() {
             <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', letterSpacing: 1.2, marginBottom: 7, textTransform: 'uppercase', fontWeight: 600 }}>Actions</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px 8px', fontSize: 11 }}>
               {[
-                { c: '#154c9e', l: 'Hit',       d: 'Take a card'    },
-                { c: '#22c55e', l: 'Stand',     d: 'Keep hand'      },
-                { c: '#8b5cf6', l: 'Double',    d: '2× bet + 1 card'},
-                { c: '#8b5cf6', l: 'Split',     d: 'Split pairs'    },
-                { c: '#6b7280', l: 'Surrender', d: 'Forfeit half'   },
-                { c: '#fbbf24', l: 'Blackjack', d: 'Natural 21'     },
+                { c: '#154c9e', l: 'Hit', d: 'Take a card' },
+                { c: '#22c55e', l: 'Stand', d: 'Keep hand' },
+                { c: '#8b5cf6', l: 'Double', d: '2× bet + 1 card' },
+                { c: '#8b5cf6', l: 'Split', d: 'Split pairs' },
+                { c: '#6b7280', l: 'Surrender', d: 'Forfeit half' },
+                { c: '#fbbf24', l: 'Blackjack', d: 'Natural 21' },
               ].map(i => (
                 <div key={i.l} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: i.c, flexShrink: 0 }} />
@@ -256,7 +256,7 @@ export default function App() {
         </div>
       </div>
       {sel && <Sel title={sel === 'dealer' ? "Dealer's Card" : sel === 'split' ? "Card for Hand " + (split?.a + 1) : "Your Card"} onSelect={selCard} onClose={() => setSel(null)} />}
-      
+
       {/* Added Feature Section */}
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '8px 16px', marginTop: '4px', marginBottom: '4px', background: 'transparent' }}>
         <div style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 800, fontFamily: "'SK Modernist', 'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', width: '100%', maxWidth: '600px' }}>
@@ -288,7 +288,7 @@ export default function App() {
               color: '#e2eeff',
               fontSize: 'clamp(1.6rem, 5vw, 2.4rem)',
               fontWeight: 900,
-              fontFamily: "'SK Modernist', 'Inter', system-ui, sans-serif",
+              fontFamily: "'Royal Flush', serif",
               letterSpacing: '0.06em',
               textDecoration: 'none',
               cursor: 'pointer',
@@ -314,7 +314,7 @@ export default function App() {
         {/* Socials Panel */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '24px' }}>
           {[
-            { href: 'https://kick.com/doug', icon: <img src={kickIcon} alt="Kick" style={{ width: 130, height: 130, objectFit: 'contain' }} />, label: 'Kick' },
+            { href: 'https://kick.com/doug', icon: <img src={kickIcon} alt="Kick" style={{ width: 32, height: 32, objectFit: 'contain' }} />, label: 'Kick' },
             { href: 'https://discord.gg/dougjumper', icon: <DiI />, label: 'Discord' },
             { href: 'https://x.com/DougGambles', icon: <XI />, label: 'X' },
           ].map(({ href, icon, label }) => (
