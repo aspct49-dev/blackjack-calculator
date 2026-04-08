@@ -314,7 +314,7 @@ export default function App() {
         {/* Socials Panel */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '24px' }}>
           {[
-            { href: 'https://kick.com/doug', icon: <img src={kickIcon} alt="Kick" style={{ width: 32, height: 32, objectFit: 'contain' }} />, label: 'Kick' },
+            { href: 'https://kick.com/doug', icon: <img src={kickIcon} alt="Kick" style={{ width: 72, height: 72, objectFit: 'contain' }} />, label: 'Kick' },
             { href: 'https://discord.gg/dougjumper', icon: <DiI />, label: 'Discord' },
             { href: 'https://x.com/DougGambles', icon: <XI />, label: 'X' },
           ].map(({ href, icon, label }) => (
@@ -337,6 +337,7 @@ export default function App() {
                 color: '#fff',
                 textDecoration: 'none',
                 flexShrink: 0,
+                overflow: 'hidden',
               }}
             >
               {icon}
