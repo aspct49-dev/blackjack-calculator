@@ -248,7 +248,7 @@ export default function App() {
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px', marginTop: '48px', marginBottom: '48px', background: 'transparent' }}>
         <div style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: "'SK Modernist', 'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', height: '64px', width: '100%', maxWidth: '600px' }}>
           <Typewriter
-            text={["Want to play blackjack?", "click on the button below ⬇️"]}
+            text={["want to play blackjack?", "Click the button below ⬇️"]}
             speed={60}
             initialDelay={500}
             className="text-blue-100"
