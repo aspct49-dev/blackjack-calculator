@@ -245,21 +245,20 @@ export default function App() {
       {sel && <Sel title={sel === 'dealer' ? "Dealer's Card" : sel === 'split' ? "Card for Hand " + (split?.a + 1) : "Your Card"} onSelect={selCard} onClose={() => setSel(null)} />}
       
       {/* Added Feature Section */}
-      <div className="w-full flex-col text-center p-8 bg-transparent">
-        <p className="whitespace-pre-wrap text-blue-100 font-semibold text-xl">
-          <span>{"Want to play blackjack 🃏 "}</span>
+      <div className="w-full flex flex-col items-center justify-center p-8 mt-12 mb-12 bg-transparent">
+        <div className="text-xl font-semibold text-center h-12 w-full max-w-[400px]">
           <Typewriter
-            text={["click on the button below"]}
-            speed={80}
+            text={["Want to play blackjack?", "click on the button below ⬇️"]}
+            speed={60}
             initialDelay={500}
-            className="text-blue-400"
+            className="text-blue-100"
             waitTime={1500}
-            deleteSpeed={40}
-            cursorChar={"_"}
-            cursorClassName="ml-1 text-blue-300"
+            deleteSpeed={35}
+            cursorChar={"|"}
+            cursorClassName="ml-1 text-blue-400 font-bold"
             loop={false}
           />
-        </p>
+        </div>
       </div>
 
       {/* Disclaimer */}

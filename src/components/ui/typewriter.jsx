@@ -60,9 +60,13 @@ const Typewriter = ({
             setCurrentIndex((prev) => prev + 1);
           }, speed);
         } else if (texts.length > 1) {
-          timeout = setTimeout(() => {
-            setIsDeleting(true);
-          }, waitTime);
+          if (currentTextIndex === texts.length - 1 && !loop) {
+            return;
+          } else {
+            timeout = setTimeout(() => {
+              setIsDeleting(true);
+            }, waitTime);
+          }
         }
       }
     };
