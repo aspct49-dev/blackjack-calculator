@@ -139,8 +139,7 @@ export default function App() {
   const [showR, setShowR] = useState(false);
   const [split, setSplit] = useState(null);
   const [done, setDone] = useState(false);
-  const [ta, setTa] = useState(false);
-  const chP = k => { setPreset(k); setRules(PRESETS[k]); setDc(null); setPc([]); setSplit(null); setDone(false); setTa(true); setTimeout(() => setTa(false), 350); };
+  const chP = k => { setPreset(k); setRules(PRESETS[k]); setDc(null); setPc([]); setSplit(null); setDone(false); };
   const reset = () => { setDc(null); setPc([]); setSplit(null); setDone(false); };
   const selCard = card => { if (sel === 'dealer') setDc(card); else if (sel === 'split') { setSplit(p => { const n = { ...p }; n[`h${p.a + 1}`] = [...n[`h${p.a + 1}`], card]; return n; }); } else setPc(p => [...p, card]); setSel(null); };
   const rmC = i => setPc(p => p.filter((_, x) => x !== i));
@@ -170,7 +169,7 @@ export default function App() {
           {Object.entries(PRESETS).map(([k, v]) => (<button key={k} onClick={() => chP(k)} style={{ flex: 1, padding: '10px 6px', borderRadius: 7, border: 'none', background: 'transparent', color: preset === k ? '#fff' : 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: preset === k ? 700 : 500, cursor: 'pointer', transition: 'color 0.3s', position: 'relative', zIndex: 1 }}>{v.name}</button>))}
         </div>
 
-        <div style={{ animation: ta ? 'cf .35s ease' : 'none' }}>
+        <div key={preset} style={{ animation: 'cf .2s ease' }}>
           {/* Rules */}
           <button onClick={() => setShowR(!showR)} style={{ width: '100%', padding: '7px 12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.5)', fontSize: 11, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showR ? 0 : 10 }}><span>{rules.desc}</span><span style={{ fontSize: 9 }}>{showR ? '\u25B2' : '\u25BC'}</span></button>
           {showR && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderTop: 'none', borderRadius: '0 0 8px 8px', padding: '8px 12px', marginBottom: 10, fontSize: 11, color: 'rgba(255,255,255,0.5)', display: 'flex', gap: 12, flexWrap: 'wrap' }}>{[['Dealer Stands S17', 's17'], ['Surrender', 'surr'], ['Double After Split', 'das']].map(([lb, k]) => (<label key={k} style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer' }}><input type="checkbox" checked={rules[k]} onChange={e => setRules(r => ({ ...r, [k]: e.target.checked }))} style={{ accentColor: '#154c9e' }} /><span>{lb}</span></label>))}</div>)}
