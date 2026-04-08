@@ -117,6 +117,7 @@ const IgI = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
 const KiI = () => <img src={kickIcon} alt="Kick" style={{ width: 38, height: 38, objectFit: 'contain', transform: 'scale(1.8)' }} />;
 const YtI = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M21.582 6.186c-.23-.86-.908-1.538-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418c-.86.23-1.538.908-1.768 1.768C2 7.746 2 12 2 12s0 4.254.418 5.814c.23.86.908 1.538 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418c.86-.23 1.538-.908 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM9.996 15.51v-7.02l6.508 3.51-6.508 3.51z"/></svg>;
 const XI = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>;
+const DiI = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.132 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>;
 
 function Sel({ onSelect, onClose, title }) { return (<div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, backdropFilter: 'blur(6px)', animation: 'fi .2s ease' }} onClick={onClose}><div style={{ background: 'linear-gradient(150deg, #0a1832 0%, #154c9e 100%)', borderRadius: 16, padding: '22px 18px', maxWidth: 340, width: '90%', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 24px 64px rgba(0,0,0,0.5)', animation: 'si .2s ease' }} onClick={e => e.stopPropagation()}><h3 style={{ margin: '0 0 14px', textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 700, letterSpacing: 1 }}>{title}</h3><div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 7 }}>{CARDS.map(l => (<button key={l} onClick={() => onSelect(l)} style={{ padding: '12px 0', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: l === 'A' ? '#fbbf24' : '#fff', fontSize: 16, fontWeight: 700, fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif", cursor: 'pointer', transition: 'all 0.15s' }} onMouseEnter={e => { e.target.style.background = 'rgba(255,255,255,0.15)'; e.target.style.transform = 'scale(1.05)'; }} onMouseLeave={e => { e.target.style.background = 'rgba(255,255,255,0.06)'; e.target.style.transform = 'scale(1)'; }}>{l}</button>))}</div><button onClick={onClose} style={{ marginTop: 12, width: '100%', padding: '9px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)', background: 'transparent', color: 'rgba(255,255,255,0.4)', fontSize: 13, cursor: 'pointer' }}>Cancel</button></div></div>); }
 
@@ -154,25 +155,25 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(170deg, #040c1e 0%, #0a1d42 35%, #154c9e 100%)', fontFamily: "'Segoe UI',system-ui,sans-serif", color: '#fff', position: 'relative' }}>
       <Stars />
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto', padding: '20px 14px 44px' }}>
+      <div className="main-wrap" style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto', padding: '12px 14px 12px' }}>
         {/* HEADER */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24, marginTop: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 8, marginTop: 0 }}>
           <a href="https://doug.gg" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'flex', justifyContent: 'center', flex: '0 1 auto', textDecoration: 'none' }}>
             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, rgba(21,76,158,0.3) 40%, transparent 70%)', filter: 'blur(20px)', animation: 'auraFloat 4s ease-in-out infinite', pointerEvents: 'none' }} />
-            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 120, position: 'relative', zIndex: 1, animation: 'logoFloat 4s ease-in-out infinite' }} />
+            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 90, position: 'relative', zIndex: 1, animation: 'logoFloat 4s ease-in-out infinite' }} />
           </a>
         </div>
 
         {/* TABS */}
-        <div style={{ position: 'relative', display: 'flex', marginBottom: 18, background: 'rgba(255,255,255,0.05)', borderRadius: 10, padding: 3, border: '1px solid rgba(255,255,255,0.08)' }}>
+        <div style={{ position: 'relative', display: 'flex', marginBottom: 10, background: 'rgba(255,255,255,0.05)', borderRadius: 10, padding: 3, border: '1px solid rgba(255,255,255,0.08)' }}>
           <div style={{ position: 'absolute', top: 3, bottom: 3, width: `calc(${100 / 3}% - 2px)`, left: `calc(${Object.keys(PRESETS).indexOf(preset) * (100 / 3)}% + 1px)`, background: 'rgba(255,255,255,0.12)', borderRadius: 7, transition: 'left 0.3s cubic-bezier(0.4,0,0.2,1)', zIndex: 0 }} />
           {Object.entries(PRESETS).map(([k, v]) => (<button key={k} onClick={() => chP(k)} style={{ flex: 1, padding: '10px 6px', borderRadius: 7, border: 'none', background: 'transparent', color: preset === k ? '#fff' : 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: preset === k ? 700 : 500, cursor: 'pointer', transition: 'color 0.3s', position: 'relative', zIndex: 1 }}>{v.name}</button>))}
         </div>
 
         <div style={{ animation: ta ? 'cf .35s ease' : 'none' }}>
           {/* Rules */}
-          <button onClick={() => setShowR(!showR)} style={{ width: '100%', padding: '9px 12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.5)', fontSize: 11, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showR ? 0 : 16 }}><span>{rules.desc}</span><span style={{ fontSize: 9 }}>{showR ? '\u25B2' : '\u25BC'}</span></button>
-          {showR && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderTop: 'none', borderRadius: '0 0 8px 8px', padding: '10px 12px', marginBottom: 16, fontSize: 11, color: 'rgba(255,255,255,0.5)', display: 'flex', gap: 12, flexWrap: 'wrap' }}>{[['Dealer Stands S17', 's17'], ['Surrender', 'surr'], ['Double After Split', 'das']].map(([lb, k]) => (<label key={k} style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer' }}><input type="checkbox" checked={rules[k]} onChange={e => setRules(r => ({ ...r, [k]: e.target.checked }))} style={{ accentColor: '#154c9e' }} /><span>{lb}</span></label>))}</div>)}
+          <button onClick={() => setShowR(!showR)} style={{ width: '100%', padding: '7px 12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.5)', fontSize: 11, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showR ? 0 : 10 }}><span>{rules.desc}</span><span style={{ fontSize: 9 }}>{showR ? '\u25B2' : '\u25BC'}</span></button>
+          {showR && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderTop: 'none', borderRadius: '0 0 8px 8px', padding: '8px 12px', marginBottom: 10, fontSize: 11, color: 'rgba(255,255,255,0.5)', display: 'flex', gap: 12, flexWrap: 'wrap' }}>{[['Dealer Stands S17', 's17'], ['Surrender', 'surr'], ['Double After Split', 'das']].map(([lb, k]) => (<label key={k} style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer' }}><input type="checkbox" checked={rules[k]} onChange={e => setRules(r => ({ ...r, [k]: e.target.checked }))} style={{ accentColor: '#154c9e' }} /><span>{lb}</span></label>))}</div>)}
 
           {/* DEALER */}
           <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 12, marginBottom: 8 }}>
@@ -227,28 +228,40 @@ export default function App() {
               </div>
             </div>
           ) : hasRes && result && done ? (<div style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)', borderRadius: 12, padding: '14px 16px', textAlign: 'center', marginBottom: 12, animation: 'fi .25s ease' }}><div style={{ fontSize: 13, color: '#22c55e', fontWeight: 600 }}>Hand complete</div></div>
-          ) : (!split && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '22px 16px', textAlign: 'center', marginBottom: 12 }}><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>{!dc ? "Select the dealer's face-up card" : pc.length < 2 ? `Select your ${pc.length === 0 ? 'first' : 'second'} card` : ""}</div></div>))}
+          ) : (!split && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '12px 16px', textAlign: 'center', marginBottom: 8 }}><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>{!dc ? "Select the dealer's face-up card" : pc.length < 2 ? `Select your ${pc.length === 0 ? 'first' : 'second'} card` : ""}</div></div>))}
 
           {dc === 'A' && pc.length >= 2 && (<div style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: 8, padding: '8px 12px', marginBottom: 12, fontSize: 11, color: '#f87171', textAlign: 'center', fontWeight: 500 }}>Always decline insurance</div>)}
 
-          <button onClick={reset} style={{ width: '100%', padding: '12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', marginBottom: 20 }} onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.12)'} onMouseLeave={e => e.target.style.background = 'rgba(255,255,255,0.06)'}>Deal Again</button>
+          <button onClick={reset} style={{ width: '100%', padding: '10px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s', marginBottom: 10 }} onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.12)'} onMouseLeave={e => e.target.style.background = 'rgba(255,255,255,0.06)'}>Deal Again</button>
 
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '10px 12px' }}>
             <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', letterSpacing: 1.2, marginBottom: 7, textTransform: 'uppercase', fontWeight: 600 }}>Actions</div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px 12px', fontSize: 11 }}>
-              {[{ c: '#154c9e', l: 'Hit', d: 'Take a card' }, { c: '#22c55e', l: 'Stand', d: 'Keep hand' }, { c: '#8b5cf6', l: 'Double', d: '2x bet + 1 card' }, { c: '#8b5cf6', l: 'Split', d: 'Split pairs' }, { c: '#6b7280', l: 'Surrender', d: 'Forfeit half' }, { c: '#fbbf24', l: 'Blackjack', d: 'Natural 21' }].map(i => (<div key={i.l} style={{ display: 'flex', alignItems: 'center', gap: 6 }}><div style={{ width: 6, height: 6, borderRadius: '50%', background: i.c, flexShrink: 0 }} /><span style={{ color: 'rgba(255,255,255,0.5)' }}><strong style={{ color: i.c }}>{i.l}</strong> {i.d}</span></div>))}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px 8px', fontSize: 11 }}>
+              {[
+                { c: '#154c9e', l: 'Hit',       d: 'Take a card'    },
+                { c: '#22c55e', l: 'Stand',     d: 'Keep hand'      },
+                { c: '#8b5cf6', l: 'Double',    d: '2× bet + 1 card'},
+                { c: '#8b5cf6', l: 'Split',     d: 'Split pairs'    },
+                { c: '#6b7280', l: 'Surrender', d: 'Forfeit half'   },
+                { c: '#fbbf24', l: 'Blackjack', d: 'Natural 21'     },
+              ].map(i => (
+                <div key={i.l} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: i.c, flexShrink: 0 }} />
+                  <span style={{ color: 'rgba(255,255,255,0.5)' }}><strong style={{ color: i.c }}>{i.l}</strong> {i.d}</span>
+                </div>
+              ))}
             </div>
           </div>
-          <div style={{ textAlign: 'center', fontSize: 9, color: 'rgba(255,255,255,0.15)', lineHeight: 1.5, marginTop: 16 }}>Based on mathematically optimal basic strategy</div>
+          <div style={{ textAlign: 'center', fontSize: 9, color: 'rgba(255,255,255,0.15)', lineHeight: 1.5, marginTop: 8 }}>Based on mathematically optimal basic strategy</div>
         </div>
       </div>
       {sel && <Sel title={sel === 'dealer' ? "Dealer's Card" : sel === 'split' ? "Card for Hand " + (split?.a + 1) : "Your Card"} onSelect={selCard} onClose={() => setSel(null)} />}
       
       {/* Added Feature Section */}
-      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px', marginTop: '48px', marginBottom: '48px', background: 'transparent' }}>
-        <div style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: "'SK Modernist', 'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', height: '64px', width: '100%', maxWidth: '600px' }}>
+      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '8px 16px', marginTop: '4px', marginBottom: '4px', background: 'transparent' }}>
+        <div style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 800, fontFamily: "'SK Modernist', 'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', width: '100%', maxWidth: '600px' }}>
           <Typewriter
-            text={["want to play blackjack?", "Click the button below ⬇️"]}
+            text={["want to play blackjack?", "click the button below ⬇️"]}
             speed={60}
             initialDelay={500}
             className="text-blue-100"
@@ -259,18 +272,77 @@ export default function App() {
             loop={true}
           />
         </div>
+        {/* Roobet Button */}
+        <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'center' }}>
+          <a
+            href="https://roobet.com/?ref=doug"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="roobet-btn"
+            style={{
+              display: 'inline-block',
+              padding: 'clamp(14px, 3vw, 20px) clamp(40px, 8vw, 72px)',
+              borderRadius: '14px',
+              background: 'linear-gradient(135deg, #0a1832 0%, #154c9e 50%, #0a1832 100%)',
+              border: '1.5px solid rgba(96,165,250,0.4)',
+              color: '#e2eeff',
+              fontSize: 'clamp(1.6rem, 5vw, 2.4rem)',
+              fontWeight: 900,
+              fontFamily: "'SK Modernist', 'Inter', system-ui, sans-serif",
+              letterSpacing: '0.06em',
+              textDecoration: 'none',
+              cursor: 'pointer',
+              position: 'relative',
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            blackjack
+          </a>
+        </div>
       </div>
 
       {/* Disclaimer */}
       <footer style={{
         textAlign: 'center',
-        padding: '40px 20px',
+        padding: '8px 20px 24px',
         color: 'rgba(255, 255, 255, 0.4)',
         fontSize: '13px',
         lineHeight: '1.6',
-        marginTop: '40px',
         fontFamily: 'system-ui, -apple-system, sans-serif'
       }}>
+        {/* Socials Panel */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '24px' }}>
+          {[
+            { href: 'https://kick.com/doug', icon: <img src={kickIcon} alt="Kick" style={{ width: 72, height: 72, objectFit: 'contain' }} />, label: 'Kick' },
+            { href: 'https://discord.gg/dougjumper', icon: <DiI />, label: 'Discord' },
+            { href: 'https://x.com/DougGambles', icon: <XI />, label: 'X' },
+          ].map(({ href, icon, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-btn"
+              aria-label={label}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 52,
+                height: 52,
+                borderRadius: 12,
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff',
+                textDecoration: 'none',
+                flexShrink: 0,
+              }}
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
         <div style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -305,6 +377,24 @@ export default function App() {
         *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
         button:active{transform:scale(0.97)!important}
         .add-card-btn:hover{border-color:rgba(255,255,255,0.5)!important;background:rgba(255,255,255,0.1)!important;transform:scale(1.08);box-shadow:0 0 15px rgba(96,165,250,0.2)}
+        .roobet-btn{transition:box-shadow 0.3s ease,border-color 0.3s ease,background 0.3s ease!important}
+        .roobet-btn:hover{box-shadow:0 0 32px rgba(96,165,250,0.45),0 0 64px rgba(96,165,250,0.15),0 8px 24px rgba(0,0,0,0.4)!important;border-color:rgba(147,197,253,0.75)!important;background:linear-gradient(135deg,#0d2250 0%,#1a5cc4 50%,#0d2250 100%)!important}
+        .roobet-btn:active{transform:scale(0.97)!important}
+        .social-btn{transition:background 0.2s ease,border-color 0.2s ease,transform 0.2s ease,box-shadow 0.2s ease!important}
+        .social-btn:hover{background:rgba(255,255,255,0.12)!important;border-color:rgba(255,255,255,0.22)!important;transform:translateY(-2px)!important;box-shadow:0 6px 20px rgba(0,0,0,0.3)!important}
+        .social-btn:active{transform:translateY(0) scale(0.96)!important}
+        @media(min-width:640px){
+          .main-wrap{max-width:600px!important;padding:12px 24px 12px!important}
+        }
+        @media(min-width:900px){
+          .main-wrap{max-width:720px!important;padding:12px 32px 12px!important}
+        }
+        @media(min-width:1200px){
+          .main-wrap{max-width:820px!important;padding:12px 40px 12px!important}
+        }
+        @media(max-width:400px){
+          .main-wrap{padding:10px 10px 10px!important}
+        }
       `}</style>
     </div>
   );
