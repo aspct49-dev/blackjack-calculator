@@ -155,13 +155,11 @@ export default function App() {
       <Stars />
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto', padding: '20px 14px 44px' }}>
         {/* HEADER */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginBottom: 20 }}>
-          <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}><SBtn href="https://www.instagram.com/doug_gambles/"><IgI /></SBtn><SBtn href="https://kick.com/Doug"><KiI /></SBtn></div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24, marginTop: 10 }}>
           <a href="https://doug.gg" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'flex', justifyContent: 'center', flex: '0 1 auto', textDecoration: 'none' }}>
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 260, height: 120, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, rgba(21,76,158,0.4) 30%, transparent 70%)', filter: 'blur(20px)', animation: 'logoGlow 3s ease-in-out infinite', pointerEvents: 'none' }} />
-            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 80, position: 'relative', zIndex: 1, filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2)) drop-shadow(0 0 40px rgba(21,76,158,0.4))', animation: 'logoGlow 3s ease-in-out infinite' }} />
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, rgba(21,76,158,0.4) 30%, transparent 70%)', filter: 'blur(20px)', animation: 'logoGlow 3s ease-in-out infinite', pointerEvents: 'none' }} />
+            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 120, position: 'relative', zIndex: 1, filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2)) drop-shadow(0 0 40px rgba(21,76,158,0.4))', animation: 'logoGlow 3s ease-in-out infinite' }} />
           </a>
-          <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}><SBtn href="https://youtube.com/@DougGambles"><YtI /></SBtn><SBtn href="https://x.com/DougGambles"><XI /></SBtn></div>
         </div>
 
         {/* TABS */}
