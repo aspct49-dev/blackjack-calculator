@@ -157,8 +157,8 @@ export default function App() {
         {/* HEADER */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24, marginTop: 10 }}>
           <a href="https://doug.gg" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'flex', justifyContent: 'center', flex: '0 1 auto', textDecoration: 'none' }}>
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, rgba(21,76,158,0.4) 30%, transparent 70%)', filter: 'blur(20px)', animation: 'logoGlow 3s ease-in-out infinite', pointerEvents: 'none' }} />
-            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 120, position: 'relative', zIndex: 1, filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2)) drop-shadow(0 0 40px rgba(21,76,158,0.4))', animation: 'logoGlow 3s ease-in-out infinite' }} />
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, rgba(21,76,158,0.3) 40%, transparent 70%)', filter: 'blur(20px)', animation: 'auraFloat 4s ease-in-out infinite', pointerEvents: 'none' }} />
+            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 120, position: 'relative', zIndex: 1, animation: 'logoFloat 4s ease-in-out infinite' }} />
           </a>
         </div>
 
@@ -278,7 +278,8 @@ export default function App() {
 
       <style>{`
         @keyframes textShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-        @keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 15px rgba(255,255,255,0.15)) drop-shadow(0 0 30px rgba(21,76,158,0.3))}50%{filter:drop-shadow(0 0 25px rgba(255,255,255,0.25)) drop-shadow(0 0 50px rgba(21,76,158,0.5))}}
+        @keyframes logoFloat{0%,100%{transform:translateY(0);filter:drop-shadow(0 0 15px rgba(255,255,255,0.1)) drop-shadow(0 10px 20px rgba(21,76,158,0.3))}50%{transform:translateY(-8px);filter:drop-shadow(0 0 25px rgba(255,255,255,0.25)) drop-shadow(0 14px 30px rgba(21,76,158,0.5))}}
+        @keyframes auraFloat{0%,100%{transform:translate(-50%,-50%);opacity:0.8}50%{transform:translate(-50%, calc(-50% - 8px)) scale(1.05);opacity:1}}
         @keyframes slideIn{from{opacity:0;transform:translateY(15px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
         @keyframes fi{from{opacity:0}to{opacity:1}}
         @keyframes si{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
