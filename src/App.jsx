@@ -246,7 +246,7 @@ export default function App() {
       
       {/* Added Feature Section */}
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px', marginTop: '48px', marginBottom: '48px', background: 'transparent' }}>
-        <div style={{ fontSize: '1.25rem', fontWeight: 600, textAlign: 'center', height: '48px', width: '100%', maxWidth: '400px' }}>
+        <div style={{ fontSize: '1.75rem', fontWeight: 800, fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif", textAlign: 'center', height: '64px', width: '100%', maxWidth: '600px' }}>
           <Typewriter
             text={["Want to play blackjack?", "click on the button below ⬇️"]}
             speed={60}
@@ -256,7 +256,7 @@ export default function App() {
             deleteSpeed={35}
             cursorChar={"|"}
             cursorClassName="ml-1 text-blue-400 font-bold"
-            loop={false}
+            loop={true}
           />
         </div>
       </div>
