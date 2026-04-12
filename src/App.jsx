@@ -154,14 +154,15 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(170deg, #040c1e 0%, #0a1d42 35%, #154c9e 100%)', fontFamily: "'Segoe UI',system-ui,sans-serif", color: '#fff', position: 'relative' }}>
       <Stars />
-      <div className="main-wrap" style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto', padding: '12px 14px 12px' }}>
-        {/* HEADER */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 8, marginTop: 0 }}>
-          <a href="https://doug.gg" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'flex', justifyContent: 'center', flex: '0 1 auto', textDecoration: 'none' }}>
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, rgba(21,76,158,0.3) 40%, transparent 70%)', filter: 'blur(20px)', animation: 'auraFloat 4s ease-in-out infinite', pointerEvents: 'none' }} />
-            <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 90, position: 'relative', zIndex: 1, animation: 'logoFloat 4s ease-in-out infinite' }} />
-          </a>
-        </div>
+      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 8, marginTop: 0 }}>
+        <a href="https://doug.gg" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'flex', justifyContent: 'center', flex: '0 1 auto', textDecoration: 'none' }}>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 320, height: 140, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, rgba(21,76,158,0.3) 40%, transparent 70%)', filter: 'blur(20px)', animation: 'auraFloat 4s ease-in-out infinite', pointerEvents: 'none' }} />
+          <img src={mainLogo} alt="Blackjack Calculator" style={{ height: 120, position: 'relative', zIndex: 1, animation: 'logoFloat 4s ease-in-out infinite' }} />
+        </a>
+      </header>
+      <main>
+        <h1 style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0 }}>Blackjack Calculator | The Best Online Blackjack Guide</h1>
+        <div className="main-wrap" style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto', padding: '12px 14px 12px' }}>
 
         {/* TABS */}
         <div style={{ position: 'relative', display: 'flex', marginBottom: 10, background: 'rgba(255,255,255,0.05)', borderRadius: 10, padding: 3, border: '1px solid rgba(255,255,255,0.08)' }}>
@@ -171,7 +172,7 @@ export default function App() {
 
         <div key={preset} style={{ animation: 'cf .2s ease' }}>
           {/* Rules */}
-          <button onClick={() => setShowR(!showR)} style={{ width: '100%', padding: '7px 12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.5)', fontSize: 11, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showR ? 0 : 10 }}><span>{rules.desc}</span><span style={{ fontSize: 9 }}>{showR ? '\u25B2' : '\u25BC'}</span></button>
+          <button onClick={() => setShowR(!showR)} style={{ width: '100%', padding: '10px 16px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.5)', fontSize: 14, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: showR ? 0 : 10 }}><span>{rules.desc}</span><span style={{ fontSize: 10 }}>{showR ? '\u25B2' : '\u25BC'}</span></button>
           {showR && (<div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderTop: 'none', borderRadius: '0 0 8px 8px', padding: '8px 12px', marginBottom: 10, fontSize: 11, color: 'rgba(255,255,255,0.5)', display: 'flex', gap: 12, flexWrap: 'wrap' }}>{[['Dealer Stands S17', 's17'], ['Surrender', 'surr'], ['Double After Split', 'das']].map(([lb, k]) => (<label key={k} style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer' }}><input type="checkbox" checked={rules[k]} onChange={e => setRules(r => ({ ...r, [k]: e.target.checked }))} style={{ accentColor: '#154c9e' }} /><span>{lb}</span></label>))}</div>)}
 
           {/* DEALER */}
@@ -300,6 +301,8 @@ export default function App() {
           </a>
         </div>
       </div>
+
+      </main>
 
       {/* Disclaimer */}
       <footer style={{
